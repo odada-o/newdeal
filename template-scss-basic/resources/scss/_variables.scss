@@ -1,0 +1,159 @@
+// 변수 설정
+
+// # Key colors
+
+// 웹 콘텐츠 접근성 지침(WCAG)의 AA 레벨을 충족하는 색상별 10단계(0,100 제외)를 지원하며, Grayscale을 제외한 색상별 주요 색상은 50이다.
+// Color Palette는 가장 밝은 색상을 0, 가장 어두운 색상을 100으로 한다.
+// Color는 명확한 커뮤니케이션을 위해 색상 명을 사용한다.
+
+////////////////////////////
+// ## Primary colors
+
+// Primary Color는 버튼, 활성 상태와 같은 UI 전체의 주요 구성 요소에 사용된다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_13.png
+$primary: #246beb;
+$primary-0: #ffffff;
+$primary-5: #eff5ff;
+$primary-10: #d3e1fb;
+$primary-20: #a7c4f7;
+$primary-30: #7ca6f3;
+$primary-40: #5089ef; // (3 : 1 with white)
+$primary-50: #246beb; // base (4.5 : 1 with white), 입력창 활성화
+$primary-60: #1d56bc;
+$primary-70: #16408d;
+$primary-80: #0e2b5e;
+$primary-90: #07152f;
+$primary-100: #000000;
+
+////////////////////////////
+// # Secondary colors
+
+// Secondary Color는 필터, 칩과 같이 UI에서 보조적인 역할을 하는 구성 요소 전반에 사용된다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_14.png
+$secondary-0: #ffffff;
+$secondary-5: #edf1f5;
+$secondary-10: #cdd7e4;
+$secondary-20: #b4c4d6;
+$secondary-30: #99b0cb;
+$secondary-40: #2a5c96; // (3 : 1 with white)
+$secondary-50: #003675; // base (4.5 : 1 with white)
+$secondary-60: #002b5e;
+$secondary-70: #002046;
+$secondary-80: #00162f;
+$secondary-90: #000b17;
+$secondary-100: #000000;
+
+$txtDefult: #202020;
+$blurTxt: rgba($txtDefult, 0.5);
+$bgDefult: rgba($primary, 0.05);
+$linkDefult: #666;
+
+$white: #fff;
+$black: #000;
+
+////////////////////////////
+// Grayscale
+
+// Grayscale은 정보전달과 위계를 나타내는 중요한 역할을 한다. 주로 BG, Text, line에 사용되며 특히 텍스트는 가독성을 고려해야 하기 때문에 배경과의 명암비를 고려해야 한다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_15.png
+$gray-0: #ffffff; // background-base
+$gray-5: #f8f8f8; // background
+$gray-10: #f0f0f0;
+$gray-20: #e4e4e4; // disabled
+$gray-30: #d8d8d8;
+$gray-40: #c6c6c6; // border
+$gray-50: #8e8e8e; // text-disabled
+$gray-60: #717171; // 입력창 기본 상태
+$gray-70: #555555; // text-body, detail text
+$gray-80: #2d2d2d; // text-title
+$gray-90: #1d1d1d;
+$gray-100: #000000;
+
+// Alpha
+// 다양한 배경 색상과 콘텐츠에 자연스럽게 융화되는 데 도움이 되는 Alpha 색상은 5단계 투명도를 사용한다.
+// BG, Text, line에 사용할 수 있으며 특히 텍스트는 가독성을 위해 배경과의 명암비를 고려해야 한다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_16.png
+$alpha-10: #e5e5e5; // background, border
+$alpha-25: #bfbfbf; // background, border
+$alpha-50: #808080; // background, border
+$alpha-75: #404040; // dimmed
+
+/////////////////
+// Point color
+// Point color는 Primary와 Secondary의 균형을 맞추거나 요소에 대한 집중도 높이는 데 사용된다.
+
+// Danger
+// 오류, 금지, 위험, 삭제, 불가 등을 표시할 때 사용한다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_08.png
+
+$danger-5: #fde7e7; // surface
+$danger-10: #fcd4de; // border
+$danger-20: #f799b1;
+$danger-30: #f36689;
+$danger-40: #ef3e5e;
+$danger-50: #eb003b; // base
+$danger-60: #d50136; // text
+$danger-70: #8d0023;
+$danger-80: #5e0018;
+$danger-90: #2f000c;
+
+// Warning
+// 실수나 오류가 발생하지 않도록 주의 사항을 전달할 때 사용한다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_09.png
+
+$warning-5: #fff8e9; // surface
+$warning-10: #ffeac1; // border
+$warning-20: #ffe2a7;
+$warning-30: #ffd47c;
+$warning-40: #ffc550;
+$warning-50: #ffb724; // base
+$warning-60: #98690a; // text
+$warning-70: #66490e;
+$warning-80: #4d370b;
+$warning-90: #332507;
+
+// Success
+// 성공, 완료, 진행 등의 결과를 전달할 때 사용한다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_10.png
+
+$success-5: #eef7f0; // surface
+$success-10: #cee9d4; // border
+$success-20: #b2dcbb;
+$success-30: #8cca99;
+$success-40: #33a14b;
+$success-50: #008a1e; // base
+$success-60: #006e18; // text
+$success-70: #005312;
+$success-80: #00370c;
+$success-90: #002207;
+
+// Information
+// 정보를 제공하거나 특별히 강조가 필요할 때 사용한다.
+// https://uiux.egovframe.go.kr/resources/img/guide/contents/style/style_02_11.png
+
+$info-5: #e9f0ff; // surface
+$info-10: #d4e1ff; // border
+$info-20: #a9c3ff;
+$info-30: #7da4ff;
+$info-40: #5286ff;
+$info-50: #2768ff; // base
+$info-60: #1f53cc; // text
+$info-70: #173e99;
+$info-80: #0c1f4d;
+$info-90: #040a1a;
+
+$fontSize: 17px;
+$fontFamily: 'Noto Sans KR', sans-serif;
+
+// 반응형 미디어 쿼리
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1440px;
+
+// layout
+$hdH: 60px;
+$hdH-xl: 80px;
+
+$ftH: 70px;
