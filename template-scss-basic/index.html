@@ -27,7 +27,6 @@
             property="og:url"
             content="http://www.mysite.com/article/article1.html"
         />
-        ...
         <meta
             name="twitter:card"
             content="summary"
@@ -60,78 +59,156 @@
             <!-- 헤더 영역 -->
             <div id="header-top">header의 상단 영역</div>
             <header id="header">
-                <h1 id="logo">
-                    <a href="#">logo</a>
-                </h1>
+                <div class="inner">
+                    <div class="head-etc">
+                        <ul>
+                            <li>
+                                <a href="#">어린이 정부포털</a>
+                            </li>
+                            <li>
+                                <button>지원</button>
+                            </li>
+                            <li>
+                                <button>화면크기</button>
+                            </li>
+                            <li>
+                                <button>Language</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="head-in">
+                        <h1 id="logo">
+                            <a href="#">logo</a>
+                        </h1>
 
-                <!-- 일반적인... 네이버 -->
-                <div id="gnb-s">
-                    <ul>
-                        <li>
-                            <a href="#">menu1</a>
-                            <ul>
-                                <li><a href="#">menu1-1</a></li>
-                                <li><a href="#">menu1-2</a></li>
-                                <li><a href="#">menu1-3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">menu2</a></li>
-                        <li><a href="#">menu3</a></li>
-                        <li><a href="#">menu4</a></li>
-                    </ul>
+                        <nav id="gnb">
+                            <dl>
+                                <!-- depth1 -->
+                                <dt><a href="#">menu1</a></dt>
+                                <!-- depth2 -->
+                                <dd>
+                                    <a href="#">menu1-1</a>
+                                    <a href="#">menu1-2</a>
+                                    <a href="#">menu1-3</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <!-- depth1 -->
+                                <dt><a href="#">menu2</a></dt>
+                                <!-- depth2 -->
+                                <dd>
+                                    <a href="#">menu2-1</a>
+                                    <a href="#">menu2-2</a>
+                                    <a href="#">menu2-3</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <!-- depth1 -->
+                                <dt><a href="#">menu3</a></dt>
+                                <!-- depth2 -->
+                                <dd>
+                                    <a href="#">menu3-1</a>
+                                    <a href="#">menu3-2</a>
+                                    <a href="#">menu3-3</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <!-- depth1 -->
+                                <dt><a href="#">menu4</a></dt>
+                                <!-- depth2 -->
+                                <dd>
+                                    <a href="#">menu4-1</a>
+                                    <a href="#">menu4-2</a>
+                                    <a href="#">menu4-3</a>
+                                </dd>
+                            </dl>
+                        </nav>
+
+                        <div class="util">
+                            <a href="#">통합검색</a>
+                            <a href="#">로그인</a>
+                            <a href="#">회원가입</a>
+                            <a href="#">마이페이지</a>
+                        </div>
+                    </div>
                 </div>
-
-                <nav id="gnb">
-                    <dl>
-                        <!-- depth1 -->
-                        <dt><a href="#">menu1</a></dt>
-                        <!-- depth2 -->
-                        <dd>
-                            <a href="#">menu1-1</a>
-                            <a href="#">menu1-2</a>
-                            <a href="#">menu1-3</a>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <!-- depth1 -->
-                        <dt><a href="#">menu2</a></dt>
-                        <!-- depth2 -->
-                        <dd>
-                            <a href="#">menu2-1</a>
-                            <a href="#">menu2-2</a>
-                            <a href="#">menu2-3</a>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <!-- depth1 -->
-                        <dt><a href="#">menu3</a></dt>
-                        <!-- depth2 -->
-                        <dd>
-                            <a href="#">menu3-1</a>
-                            <a href="#">menu3-2</a>
-                            <a href="#">menu3-3</a>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <!-- depth1 -->
-                        <dt><a href="#">menu4</a></dt>
-                        <!-- depth2 -->
-                        <dd>
-                            <a href="#">menu4-1</a>
-                            <a href="#">menu4-2</a>
-                            <a href="#">menu4-3</a>
-                        </dd>
-                    </dl>
-                </nav>
-
-                <div class="util"></div>
             </header>
 
             <!-- 컨테이너 영역 -->
-            <div id="container">본문 내용</div>
+            <div id="container">
+                <section>
+                    <div class="inner">
+                        <h2>본문 제목</h2>
+                        <p>본문 내용</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="inner">
+                        <h2>본문 제목</h2>
+                        <p>본문 내용</p>
+                    </div>
+                </section>
+            </div>
 
             <!-- 풋터 영역 -->
-            <footer id="footer">풋터 영역</footer>
+            <footer id="footer">
+                <div class="foot-quick">
+                    <div class="inner">
+                        <button>소속기관</button>
+                        <button>업무별 누리집</button>
+                        <button>산하기관 및 관련단체</button>
+                        <button>정부기관</button>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="f-logo">
+                        <img
+                            src="https://uiux.egovframe.go.kr/resources/img/pattern/layout/head_logo.svg"
+                            alt="대한민국정부"
+                        />
+                    </div>
+                    <div class="f-cnt">
+                        <div class="f-info">
+                            <div class="info-addr">
+                                <p class="info-addr">
+                                    (26464) 강원특별자치도 원주시 건강로 32(반곡동) 국민건강보험공단
+                                </p>
+                            </div>
+                            <ul class="info-cs">
+                                <li>
+                                    <strong class="strong">대표전화 1577-1000</strong>
+                                    <span class="span">(유료, 평일 09시~18시)</span>
+                                </li>
+                                <li>
+                                    <strong class="strong">해외이용 82-33-811-2001</strong>
+                                    <span class="span">(유료, 평일 09시~18시)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="f-link">
+                            <div class="link-go">
+                                <a href="#">찾아오시는 길</a>
+                                <a href="#">이용안내</a>
+                                <a href="#">직원검색</a>
+                            </div>
+                            <div class="link-sns">
+                                <a href="#">instagram</a>
+                                <a href="#">youtube</a>
+                                <a href="#">facebook</a>
+                                <a href="#">blog</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-btm">
+                        <div class="f-menu">
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">이용약관</a>
+                            <a href="#">고객센터</a>
+                        </div>
+                        <div class="f-copy">© Ministry of Education. All rights reserved.</div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
