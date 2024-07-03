@@ -1,10 +1,11 @@
 @import 'variables';
-@import 'functions';
 @import 'fonts';
 @import 'reset';
 
 // component
 @import 'component/include';
+
+@import 'root';
 
 // pattern
 @import 'pattern/include';

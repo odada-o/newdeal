@@ -285,6 +285,34 @@ legend {
   background: red;
 }
 
+:root {
+  --fz-display-sm: 4rem;
+  --fz-display-md: 5rem;
+  --fz-display-lg: 6.6rem;
+  --fz-heading-sm: 3.2rem;
+  --fz-heading-md: 4rem;
+  --fz-heading-lg: 5rem;
+  --fz-title-xsm: 1.5rem;
+  --fz-title-sm: 1.7rem;
+  --fz-title-md: 1.9rem;
+  --fz-title-lg: 2.1rem;
+  --fz-title-xlg: 2.5rem;
+  --fz-title-xxlg: 3.2rem;
+  --fz-body-sm: 1.5rem;
+  --fz-body-md: 1.7rem;
+  --fz-body-lg: 1.9rem;
+  --fz-link-sm: 1.5rem;
+  --fz-link-md: 1.7rem;
+  --fz-link-lg: 1.9rem;
+  --fz-detail-sm: 1.3rem;
+  --fz-detail-md: 1.5rem;
+  --fz-detail-lg: 1.7rem;
+  --fz-label-xsm: 1.3rem;
+  --fz-label-sm: 1.5rem;
+  --fz-label-md: 1.7rem;
+  --fz-label-lg: 1.9rem;
+}
+
 .inner {
   padding-left: 16px;
   padding-right: 16px;
@@ -299,6 +327,7 @@ legend {
 
 #header-top {
   background: red;
+  font-size: var(--fz-title-xxlg);
 }
 
 #container {
