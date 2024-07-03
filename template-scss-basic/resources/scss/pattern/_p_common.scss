@@ -9,6 +9,7 @@
     font-size: 1.1765rem;
     color: red;
     span {
-        font-size: 1.7647rem;
+        font-size: unquote(map.get($title, 'xxlg'));
+        font-family: 'CWDangamAsac-Bold';
     }
 }

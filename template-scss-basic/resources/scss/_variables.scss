@@ -144,7 +144,9 @@ $info-90: #040a1a;
 
 // $fontSize: 17px;
 $font-size-root: 62.5% !default; //10px 1rem으로 설정
-$fontFamily: 'Noto Sans KR', sans-serif;
+$fontFamily: 'Pretendard GOV Variable', 'Pretendard GOV', -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 
 $font-size: (
     sizes: (
