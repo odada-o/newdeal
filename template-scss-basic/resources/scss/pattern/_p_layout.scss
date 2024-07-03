@@ -1,1 +1,24 @@
 // 페이지의 레이아웃 영역
+.inner {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+#header-top {
+    // background: $secondary-5;
+    background: red;
+}
+
+#container {
+    flex: 1;
+}
+
+#footer {
+}

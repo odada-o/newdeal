@@ -24,3 +24,9 @@ $title: map.get($sizes, 'title');
         color: blue;
     }
 }
+
+@include tabletMore {
+    .font-test {
+        color: green;
+    }
+}
