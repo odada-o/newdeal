@@ -142,8 +142,53 @@ $info-70: #173e99;
 $info-80: #0c1f4d;
 $info-90: #040a1a;
 
-$fontSize: 17px;
+// $fontSize: 17px;
+$font-size-root: 62.5% !default; //10px 1rem으로 설정
 $fontFamily: 'Noto Sans KR', sans-serif;
+
+$font-size: (
+    sizes: (
+        display: (
+            'sm': '4rem',
+            'md': '5rem',
+            'lg': '6.6rem',
+        ),
+        heading: (
+            'sm': '3.2rem',
+            'md': '4rem',
+            'lg': '5rem',
+        ),
+        title: (
+            'xsm': '1.5rem',
+            'sm': '1.7rem',
+            'md': '1.9rem',
+            'lg': '2.1rem',
+            'xlg': '2.5rem',
+            'xxlg': '3.2rem',
+        ),
+        body: (
+            'sm': '1.5rem',
+            'md': '1.7rem',
+            'lg': '1.9rem',
+        ),
+        link: (
+            'sm': '1.5rem',
+            'md': '1.7rem',
+            'lg': '1.9rem',
+        ),
+        detail: (
+            'sm': '1.3rem',
+            'md': '1.5rem',
+            'lg': '1.7rem',
+        ),
+        label: (
+            'xsm': '1.3rem',
+            'sm': '1.5rem',
+            'md': '1.7rem',
+            'lg': '1.9rem',
+        ),
+    ),
+) !default;
 
 // 반응형 미디어 쿼리
 $breakpoint-sm: 576px;
