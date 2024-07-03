@@ -1,0 +1,7 @@
+// 본인이 자주 사용하는 코드 mixin으로 만들어서 사용하기
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

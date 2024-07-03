@@ -1,6 +1,9 @@
 @import 'variables';
 @import 'mixins';
 @import 'reset';
-@import 'common';
-@import 'main';
-@import 'sub1';
+
+// component
+@import 'component/include';
+
+// pattern
+@import 'pattern/include';

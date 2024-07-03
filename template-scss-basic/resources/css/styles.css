@@ -272,4 +272,10 @@ legend {
   font-size: 0;
   clear: both;
   content: "";
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  background: red;
 }/*# sourceMappingURL=styles.css.map */
