@@ -27,7 +27,6 @@
 
 //tablet size 이상
 @mixin tabletMore {
-    //
     @media (min-width: $breakpoint-md) {
         @content;
     }

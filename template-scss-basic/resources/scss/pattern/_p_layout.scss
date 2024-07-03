@@ -1,7 +1,22 @@
 // 페이지의 레이아웃 영역
 .inner {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: $spacer-5;
+    padding-right: $spacer-5;
+}
+
+@include mobileMore {
+    .inner {
+        padding-left: $spacer-7;
+        padding-right: $spacer-7;
+    }
+}
+
+@include tabletMore {
+    .inner {
+        width: 100%;
+        max-width: calc(1280px + #{$spacer-7 * 2});
+        margin: 0 auto;
+    }
 }
 
 #wrap {
@@ -12,9 +27,12 @@
 }
 
 #header-top {
-    // background: $secondary-5;
-    background: red;
-    font-size: var(--fz-title-xxlg);
+    background: $secondary-5;
+    font-size: var(--fz-body-sm);
+    .inner {
+        padding-top: $spacer-2;
+        padding-bottom: $spacer-2;
+    }
 }
 
 #container {

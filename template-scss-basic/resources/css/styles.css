@@ -314,10 +314,23 @@ legend {
 }
 
 .inner {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
+@media (min-width: 600px) {
+  .inner {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .inner {
+    width: 100%;
+    max-width: calc(1280px + 4.8rem);
+    margin: 0 auto;
+  }
+}
 #wrap {
   display: flex;
   flex-direction: column;
@@ -326,8 +339,12 @@ legend {
 }
 
 #header-top {
-  background: red;
-  font-size: var(--fz-title-xxlg);
+  background: #edf1f5;
+  font-size: var(--fz-body-sm);
+}
+#header-top .inner {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
 #container {
