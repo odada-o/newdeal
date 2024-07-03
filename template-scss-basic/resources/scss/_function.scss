@@ -1,4 +1,0 @@
-@use 'sass:map';
-
-$sizes: map.get($font-size, 'sizes');
-$title: map.get($sizes, 'title');

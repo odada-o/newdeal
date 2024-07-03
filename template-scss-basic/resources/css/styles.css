@@ -292,4 +292,10 @@ legend {
 .font-test span {
   font-size: 3.2rem;
   font-family: "CWDangamAsac-Bold";
+}
+
+@media screen and (min-width: 390px) {
+  .font-test {
+    color: blue;
+  }
 }/*# sourceMappingURL=styles.css.map */

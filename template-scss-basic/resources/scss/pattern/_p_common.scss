@@ -5,11 +5,21 @@
 // rem 단위는 html 요소의 font-size를 기준으로
 // 상대적인 크기를 가지는 단위입니다.
 
+@use 'sass:map';
+
+$sizes: map.get($font-size, 'sizes');
+$title: map.get($sizes, 'title');
+
 .font-test {
     font-size: 1.1765rem;
     color: red;
     span {
         font-size: unquote(map.get($title, 'xxlg'));
         font-family: 'CWDangamAsac-Bold';
+    }
+}
+@media screen and (min-width: 390px) {
+    .font-test {
+        color: blue;
     }
 }
