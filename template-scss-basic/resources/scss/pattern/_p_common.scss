@@ -18,7 +18,8 @@ $title: map.get($sizes, 'title');
         font-family: 'CWDangamAsac-Bold';
     }
 }
-@media screen and (min-width: 390px) {
+
+@include mobileMore {
     .font-test {
         color: blue;
     }

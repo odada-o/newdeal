@@ -1,2 +1,40 @@
 // mobile -> desktop
 // min-width
+@mixin mobile {
+    @media (max-width: $breakpoint-sm - 1px) {
+        @content;
+    }
+}
+@mixin mobileMore {
+    @media (min-width: $breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
+        @content;
+    }
+}
+
+//tablet size 이하
+@mixin tabletLess {
+    //
+    @media (max-width: $breakpoint-md - 1px) {
+        @content;
+    }
+}
+
+//tablet size 이상
+@mixin tabletMore {
+    //
+    @media (min-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}

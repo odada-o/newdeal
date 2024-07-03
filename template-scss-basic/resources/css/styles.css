@@ -294,7 +294,7 @@ legend {
   font-family: "CWDangamAsac-Bold";
 }
 
-@media screen and (min-width: 390px) {
+@media (min-width: 600px) {
   .font-test {
     color: blue;
   }
