@@ -52,14 +52,29 @@
             gap: $spacer-3;
             a {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 height: 100%;
                 &:nth-child(3) {
                     display: none;
                 }
             }
+            i {
+                font-size: 2.7rem;
+            }
         }
     }
+}
+
+#header .head-in .util a:first-child::before {
+    content: '\f002';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+}
+#header .head-in .util a:nth-child(2)::before {
+    content: '\f2f6';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
 }
 
 #gnb {
