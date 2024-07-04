@@ -421,6 +421,11 @@ legend {
   }
 }
 @media (min-width: 1024px) {
+  #header .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
   #header .head-etc {
     display: block;
   }
@@ -429,9 +434,45 @@ legend {
     justify-content: flex-end;
     gap: 2rem;
   }
-  #header .head-etc ul a {
+  #header .head-etc li {
+    position: relative;
+  }
+  #header .head-etc li:first-child::before {
+    display: none;
+  }
+  #header .head-etc li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.1rem;
+    height: 1.6rem;
+    background: #d8d8d8;
+  }
+  #header .head-etc a,
+  #header .head-etc button {
     color: #1d1d1d;
     font-size: var(--fz-label-xsm);
+  }
+  #header .head-etc a::after,
+  #header .head-etc button::after {
+    content: "\f107";
+    margin-left: 5px;
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #8e8e8e;
+  }
+  #header .head-etc .children a::after {
+    content: "\f35d";
+    display: inline-block;
+    margin-top: -0.4rem;
+    vertical-align: middle;
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 2rem;
   }
   #header .head-in .util .btn-nav.join {
     display: flex;
