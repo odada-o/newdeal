@@ -5,6 +5,7 @@
         @content;
     }
 }
+// 600px 이상일 경우
 @mixin mobileMore {
     @media (min-width: $breakpoint-sm) {
         @content;
@@ -17,15 +18,14 @@
     }
 }
 
-//tablet size 이하
+//1024 이하
 @mixin tabletLess {
-    //
     @media (max-width: $breakpoint-md - 1px) {
         @content;
     }
 }
 
-//tablet size 이상
+//1024px 이상
 @mixin tabletMore {
     @media (min-width: $breakpoint-md) {
         @content;

@@ -420,6 +420,20 @@ legend {
     font-size: 1.7rem;
   }
 }
+@media (min-width: 1024px) {
+  #header .head-etc {
+    display: block;
+  }
+  #header .head-in .util .btn-nav.join {
+    display: flex;
+  }
+  #header .head-in .util .btn-nav.my {
+    display: flex;
+  }
+  #header .head-in .util .btn-nav.all {
+    display: none;
+  }
+}
 #gnb {
   display: none;
 }
