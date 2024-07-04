@@ -363,31 +363,41 @@ legend {
 }
 #header .head-in .util {
   display: flex;
-  gap: 0.8rem;
+  gap: 2rem;
 }
-#header .head-in .util a {
+#header .head-in .util .btn-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  line-height: 1.5;
+  font-size: var(--fz-label-xsm);
 }
-#header .head-in .util a:first-child::before {
+#header .head-in .util .btn-nav::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+#header .head-in .util .btn-nav.sch::before {
   content: "\f002";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
 }
-#header .head-in .util a:nth-child(2)::before {
+#header .head-in .util .btn-nav.login::before {
   content: "\f2f6";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
 }
-#header .head-in .util a:nth-child(3) {
+#header .head-in .util .btn-nav.join {
   display: none;
 }
-#header .head-in .util a:last-child::before {
+#header .head-in .util .btn-nav.join::before {
+  content: "\f234";
+}
+#header .head-in .util .btn-nav.my {
+  display: none;
+}
+#header .head-in .util .btn-nav.my::before {
+  content: "\f007";
+}
+#header .head-in .util .btn-nav.all::before {
   content: "\f0c9";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
 }
 #header .head-in .util i {
   font-size: 2.7rem;

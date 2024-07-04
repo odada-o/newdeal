@@ -49,34 +49,44 @@
         justify-content: space-between;
         .util {
             display: flex;
-            gap: $spacer-3;
-            a {
+            gap: $spacer-6;
+            .btn-nav {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 height: 100%;
-                &:first-child {
+                line-height: 1.5;
+                font-size: var(--fz-label-xsm);
+                &::before {
+                    font-family: 'Line Awesome Free';
+                    font-weight: 900;
+                    font-size: 2.4rem;
+                }
+                &.sch {
                     &::before {
                         content: '\f002';
-                        font-family: 'Line Awesome Free';
-                        font-weight: 900;
                     }
                 }
-                &:nth-child(2) {
+                &.login {
                     &::before {
                         content: '\f2f6';
-                        font-family: 'Line Awesome Free';
-                        font-weight: 900;
                     }
                 }
-                &:nth-child(3) {
+                &.join {
                     display: none;
+                    &::before {
+                        content: '\f234';
+                    }
                 }
-                &:last-child {
+                &.my {
+                    display: none;
+                    &::before {
+                        content: '\f007';
+                    }
+                }
+                &.all {
                     &::before {
                         content: '\f0c9';
-                        font-family: 'Line Awesome Free';
-                        font-weight: 900;
                     }
                 }
             }
