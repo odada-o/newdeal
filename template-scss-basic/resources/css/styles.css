@@ -347,6 +347,25 @@ legend {
   padding-bottom: 0.4rem;
 }
 
+#header {
+  border-bottom: 1px solid #c6c6c6;
+}
+#header .inner {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+#header .head-etc {
+  display: none;
+}
+#header .head-in {
+  display: flex;
+  justify-content: space-between;
+}
+
+#gnb {
+  display: none;
+}
+
 #container {
   flex: 1;
 }

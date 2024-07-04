@@ -35,6 +35,25 @@
     }
 }
 
+#header {
+    border-bottom: 1px solid $gray-40;
+    .inner {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    .head-etc {
+        display: none;
+    }
+    .head-in {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+#gnb {
+    display: none;
+}
+
 #container {
     flex: 1;
 }
