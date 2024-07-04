@@ -111,17 +111,32 @@
     }
 }
 @include tabletMore {
-    #header .head-etc {
-        display: block;
-    }
-    #header .head-in .util .btn-nav.join {
-        display: flex;
-    }
-    #header .head-in .util .btn-nav.my {
-        display: flex;
-    }
-    #header .head-in .util .btn-nav.all {
-        display: none;
+    #header {
+        .head-etc {
+            display: block;
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                gap: $spacer-6;
+                a {
+                    color: $gray-90;
+                    font-size: var(--fz-label-xsm);
+                }
+            }
+        }
+        .head-in {
+            .util {
+                .btn-nav.join {
+                    display: flex;
+                }
+                .btn-nav.my {
+                    display: flex;
+                }
+                .btn-nav.all {
+                    display: none;
+                }
+            }
+        }
     }
 }
 

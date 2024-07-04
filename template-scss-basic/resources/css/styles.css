@@ -424,6 +424,15 @@ legend {
   #header .head-etc {
     display: block;
   }
+  #header .head-etc ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  #header .head-etc ul a {
+    color: #1d1d1d;
+    font-size: var(--fz-label-xsm);
+  }
   #header .head-in .util .btn-nav.join {
     display: flex;
   }
