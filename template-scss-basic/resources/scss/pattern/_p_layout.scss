@@ -55,8 +55,29 @@
                 flex-direction: column;
                 align-items: center;
                 height: 100%;
+                &:first-child {
+                    &::before {
+                        content: '\f002';
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                    }
+                }
+                &:nth-child(2) {
+                    &::before {
+                        content: '\f2f6';
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                    }
+                }
                 &:nth-child(3) {
                     display: none;
+                }
+                &:last-child {
+                    &::before {
+                        content: '\f0c9';
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                    }
                 }
             }
             i {
@@ -64,17 +85,6 @@
             }
         }
     }
-}
-
-#header .head-in .util a:first-child::before {
-    content: '\f002';
-    font-family: 'Line Awesome Free';
-    font-weight: 900;
-}
-#header .head-in .util a:nth-child(2)::before {
-    content: '\f2f6';
-    font-family: 'Line Awesome Free';
-    font-weight: 900;
 }
 
 #gnb {
