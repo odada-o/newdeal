@@ -361,6 +361,14 @@ legend {
 #header .head-etc {
   display: none;
 }
+#header #logo a {
+  display: block;
+  width: 13.2rem;
+  height: 100%;
+  background: url(https://uiux.egovframe.go.kr/resources/img/pattern/layout/head_logo.svg) no-repeat 0 50%;
+  background-size: contain;
+  text-indent: -9999px;
+}
 #header .head-in {
   display: flex;
   justify-content: space-between;
@@ -407,6 +415,11 @@ legend {
   font-size: 2.7rem;
 }
 
+@media (min-width: 600px) {
+  #header .head-in .util .btn-nav {
+    font-size: 1.7rem;
+  }
+}
 #gnb {
   display: none;
 }
