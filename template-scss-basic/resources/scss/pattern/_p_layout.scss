@@ -206,6 +206,19 @@
             display: none;
             flex-direction: column;
             padding: $spacer-4 0;
+            a {
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    margin-right: $spacer-4;
+                    margin-top: -0.3rem;
+                    background: #000;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
         }
         a {
             padding: $spacer-2 0;
