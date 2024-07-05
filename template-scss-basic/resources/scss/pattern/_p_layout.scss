@@ -242,7 +242,18 @@
             dt {
                 padding: 0;
                 background: lightcoral;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100% + 15px);
+                    background: lightgreen;
+                }
                 a {
+                    position: relative;
+                    z-index: 2;
                     display: flex;
                     align-items: center;
                     height: 60px;

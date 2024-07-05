@@ -545,7 +545,18 @@ legend {
     padding: 0;
     background: lightcoral;
   }
+  #gnb dl dt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 15px);
+    background: lightgreen;
+  }
   #gnb dl dt a {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     height: 60px;
