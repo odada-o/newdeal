@@ -183,7 +183,34 @@
 }
 
 #gnb {
-    display: none;
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gray-0;
+    padding: $spacer-6;
+    dl {
+        border-bottom: 1px solid $gray-40;
+        &.active {
+            dd {
+                display: flex;
+            }
+        }
+        dt {
+            padding: $spacer-7 0;
+            font-size: 2.4rem;
+        }
+        dd {
+            display: none;
+            flex-direction: column;
+            padding: $spacer-4 0;
+        }
+        a {
+            padding: $spacer-2 0;
+        }
+    }
 }
 
 #container {
