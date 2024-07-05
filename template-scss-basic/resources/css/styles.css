@@ -429,6 +429,7 @@ legend {
   #header {
     position: sticky;
     top: 0;
+    z-index: 1000;
   }
   #header .inner {
     display: flex;
@@ -604,4 +605,19 @@ legend {
   .font-test {
     color: green;
   }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 117px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
 }/*# sourceMappingURL=styles.css.map */
