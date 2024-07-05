@@ -587,13 +587,16 @@ legend {
   flex: 1;
 }
 
-.font-test {
-  font-size: 1.1765rem;
-  color: red;
+#footer {
+  padding: 50px 0;
 }
-.font-test span {
-  font-size: 3.2rem;
-  font-family: "CWDangamAsac-Bold";
+
+.bg-gray {
+  background-color: #f8f8f8;
+}
+
+.sec-g {
+  padding: 150px 0;
 }
 
 @media (min-width: 600px) {
