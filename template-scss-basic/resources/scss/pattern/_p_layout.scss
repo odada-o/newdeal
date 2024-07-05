@@ -232,6 +232,7 @@
         width: auto;
         padding: 0;
         dl {
+            position: relative;
             border: none;
             &:hover {
                 dd {
@@ -240,18 +241,27 @@
             }
             dt {
                 padding: 0;
-            }
-            dd {
-                a::before {
-                    display: none;
+                a {
+                    display: flex;
+                    align-items: center;
+                    height: 60px;
+                    padding: 0 $spacer-5;
+                    font-size: var(--fz-body-md);
                 }
             }
-            a {
-                display: flex;
-                align-items: center;
-                height: 60px;
-                padding: 0 $spacer-5;
-                font-size: var(--fz-body-md);
+            dd {
+                position: absolute;
+                top: 74px;
+                left: 0;
+                background: red;
+                text-align: center;
+                a {
+                    white-space: nowrap;
+                    font-size: var(--fz-body-sm);
+                    &::before {
+                        display: none;
+                    }
+                }
             }
         }
     }

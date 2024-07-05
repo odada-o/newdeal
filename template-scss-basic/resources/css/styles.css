@@ -534,6 +534,7 @@ legend {
     padding: 0;
   }
   #gnb dl {
+    position: relative;
     border: none;
   }
   #gnb dl:hover dd {
@@ -542,15 +543,26 @@ legend {
   #gnb dl dt {
     padding: 0;
   }
-  #gnb dl dd a::before {
-    display: none;
-  }
-  #gnb dl a {
+  #gnb dl dt a {
     display: flex;
     align-items: center;
     height: 60px;
     padding: 0 1.6rem;
     font-size: var(--fz-body-md);
+  }
+  #gnb dl dd {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    background: red;
+    text-align: center;
+  }
+  #gnb dl dd a {
+    white-space: nowrap;
+    font-size: var(--fz-body-sm);
+  }
+  #gnb dl dd a::before {
+    display: none;
   }
 }
 #container {
