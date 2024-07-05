@@ -538,12 +538,11 @@ legend {
     position: relative;
     border: none;
   }
-  #gnb dl:hover dd {
+  #gnb dl:hover dd, #gnb dl:focus-within dd {
     display: block;
   }
   #gnb dl dt {
     padding: 0;
-    background: lightcoral;
   }
   #gnb dl dt::before {
     content: "";
@@ -552,7 +551,6 @@ legend {
     left: 0;
     width: 100%;
     height: calc(100% + 15px);
-    background: lightgreen;
   }
   #gnb dl dt a {
     position: relative;
@@ -568,7 +566,7 @@ legend {
     top: 74px;
     left: 0;
     width: 100%;
-    background: blue;
+    background: lightcyan;
     text-align: center;
   }
   #gnb dl dd a {

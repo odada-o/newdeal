@@ -234,14 +234,14 @@
         dl {
             position: relative;
             border: none;
-            &:hover {
+            &:hover,
+            &:focus-within {
                 dd {
                     display: block;
                 }
             }
             dt {
                 padding: 0;
-                background: lightcoral;
                 &::before {
                     content: '';
                     position: absolute;
@@ -249,7 +249,6 @@
                     left: 0;
                     width: 100%;
                     height: calc(100% + 15px);
-                    background: lightgreen;
                 }
                 a {
                     position: relative;
@@ -266,7 +265,7 @@
                 top: 74px;
                 left: 0;
                 width: 100%;
-                background: blue;
+                background: lightcyan;
                 text-align: center;
                 a {
                     white-space: nowrap;
