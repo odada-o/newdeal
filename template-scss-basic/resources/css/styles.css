@@ -537,12 +537,18 @@ legend {
   #gnb dl {
     border: none;
   }
+  #gnb dl:hover dd {
+    display: block;
+  }
   #gnb dl dt {
     padding: 0;
   }
   #gnb dl a {
-    display: block;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 1.6rem;
+    font-size: var(--fz-body-md);
   }
 }
 #container {
