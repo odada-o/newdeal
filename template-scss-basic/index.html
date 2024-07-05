@@ -188,6 +188,108 @@
                 </div>
             </header>
 
+            <!-- slide -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1571566882372-1598d88abd90?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?q=80&w=3374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1513245543132-31f507417b26?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1506755855567-92ff770e8d00?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1492370284958-c20b15c692d2?q=80&w=3374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1492370284958-c20b15c692d2?q=80&w=3374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <style>
+                html,
+                body {
+                    position: relative;
+                    height: 100%;
+                }
+
+                body {
+                    background: #eee;
+                    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                    font-size: 14px;
+                    color: #000;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .swiper {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .swiper-slide img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .swiper {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            </style>
+            <script>
+                var swiper = new Swiper('.mySwiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            </script>
+
             <!-- 컨테이너 영역 -->
             <div id="container">
                 <section>
