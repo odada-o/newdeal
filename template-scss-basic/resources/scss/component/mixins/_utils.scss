@@ -1,4 +1,12 @@
 // 본인이 자주 사용하는 코드 mixin으로 만들어서 사용하기
+//flex layout
+@mixin flex-layout($d: flex, $ai: flex-start, $jc: flex-start, $fd: row) {
+    display: $d;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-direction: $fd;
+}
+
 @mixin flex($direction: row, $justify: center, $align: center) {
     display: flex;
     flex-direction: $direction;

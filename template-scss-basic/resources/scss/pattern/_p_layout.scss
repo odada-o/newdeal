@@ -20,9 +20,7 @@
 }
 
 #wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    @include flex-layout($fd: column, $ai: stretch);
     min-height: 100vh;
 }
 
@@ -93,6 +91,7 @@
                     }
                 }
                 &.all {
+                    z-index: 100;
                     &::before {
                         content: '\f0c9';
                     }
@@ -186,11 +185,11 @@
     // display: none;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 100%;
     height: 100%;
     background: $gray-0;
-    padding: $spacer-6;
+    padding: $spacer-8 $spacer-6;
     dl {
         border-bottom: 1px solid $gray-40;
         &.active {
@@ -222,6 +221,26 @@
         }
         a {
             padding: $spacer-2 0;
+        }
+    }
+}
+
+@include tabletMore {
+    #gnb {
+        position: static;
+        display: flex;
+        width: auto;
+        padding: 0;
+        dl {
+            border: none;
+            dt {
+                padding: 0;
+            }
+
+            a {
+                display: block;
+                height: 100%;
+            }
         }
     }
 }
