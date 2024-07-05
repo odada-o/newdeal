@@ -508,7 +508,6 @@ legend {
   font-size: 2.4rem;
 }
 #gnb dl dd {
-  display: none;
   flex-direction: column;
   padding: 1.2rem 0;
 }
@@ -542,6 +541,9 @@ legend {
   }
   #gnb dl dt {
     padding: 0;
+  }
+  #gnb dl dd a::before {
+    display: none;
   }
   #gnb dl a {
     display: flex;
