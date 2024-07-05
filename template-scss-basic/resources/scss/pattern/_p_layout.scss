@@ -202,7 +202,7 @@
             font-size: 2.4rem;
         }
         dd {
-            // display: none;
+            display: none;
             flex-direction: column;
             padding: $spacer-4 0;
             a {
@@ -241,6 +241,7 @@
             }
             dt {
                 padding: 0;
+                background: lightcoral;
                 a {
                     display: flex;
                     align-items: center;
@@ -253,7 +254,8 @@
                 position: absolute;
                 top: 74px;
                 left: 0;
-                background: red;
+                width: 100%;
+                background: blue;
                 text-align: center;
                 a {
                     white-space: nowrap;
