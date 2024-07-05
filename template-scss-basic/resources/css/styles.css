@@ -353,6 +353,7 @@ legend {
 }
 
 #header {
+  background: #ffffff;
   border-bottom: 1px solid #c6c6c6;
 }
 #header .inner {
@@ -425,6 +426,10 @@ legend {
   }
 }
 @media (min-width: 1024px) {
+  #header {
+    position: sticky;
+    top: 0;
+  }
   #header .inner {
     display: flex;
     flex-direction: column;

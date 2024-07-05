@@ -34,6 +34,7 @@
 }
 
 #header {
+    background: $gray-0;
     border-bottom: 1px solid $gray-40;
     .inner {
         padding-top: 1.2rem;
@@ -111,6 +112,8 @@
 }
 @include tabletMore {
     #header {
+        position: sticky;
+        top: 0;
         .inner {
             display: flex;
             flex-direction: column;
