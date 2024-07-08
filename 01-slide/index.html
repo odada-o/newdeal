@@ -31,7 +31,7 @@
             }
 
             .swiper {
-                overflow: visible;
+                /* overflow: visible; */
                 max-width: 1280px;
                 width: 100%;
                 height: 300px;
@@ -59,6 +59,15 @@
             .container {
                 overflow: hidden;
             }
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: -60px;
+                margin-top: 0;
+            }
+            .swiper-button-prev {
+                right: 100px;
+                left: auto;
+            }
         </style>
     </head>
 
@@ -77,10 +86,10 @@
                     <div class="swiper-slide">Slide 8</div>
                     <div class="swiper-slide">Slide 9</div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <!-- <div class="swiper-pagination"></div> -->
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
 
         <!-- Swiper JS -->
