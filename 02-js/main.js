@@ -148,7 +148,13 @@ while (j < 5) {
 
 // 함수 (function)
 // 기명 함수
+myFunc1();
 function myFunc1() {
     console.log('기명 함수 호출');
 }
-myFunc1();
+
+// 익명 함수 (함수 표현식)
+myFunc2();
+const myFunc2 = function () {
+    console.log('익명 함수 호출');
+};
