@@ -35,7 +35,7 @@
                 max-width: 1280px;
                 width: 100%;
                 height: 300px;
-                margin-top: 100px;
+                margin-top: 300px;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -47,6 +47,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                height: 300px;
             }
 
             .swiper-slide img {
@@ -72,6 +73,7 @@
                 position: relative;
             }
             .parent {
+                margin-bottom: 100px;
                 background: lightblue;
             }
             .child {
@@ -87,24 +89,21 @@
         </div>
 
         <!-- Swiper -->
-        <div class="container">
-            <div class="swiper-container swiper">
-                <div class="etf-slide">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
-                    </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+        <div class="container etf-slide-wrap">
+            <div class="swiper-container etf-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next etf-next"></div>
+                <div class="swiper-button-prev etf-prev"></div>
             </div>
         </div>
 
@@ -120,9 +119,9 @@
                 <div class="swiper-slide">Slide 8</div>
                 <div class="swiper-slide">Slide 9</div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next intro-next"></div>
+            <div class="swiper-button-prev intro-prev"></div>
+            <div class="swiper-pagination intro-pagination"></div>
         </div>
 
         <!-- Swiper JS -->
@@ -130,21 +129,17 @@
 
         <!-- Initialize Swiper -->
         <script>
-            var swiper = new Swiper('.etf-slide', {
+            var etfSwiper = new Swiper('.etf-slide', {
                 slidesPerView: 1,
                 spaceBetween: 20,
                 loop: true,
-                // autoplay: {
-                //     delay: 2500,
-                //     disableOnInteraction: false,
-                // },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
                 },
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.etf-next',
+                    prevEl: '.etf-prev',
                 },
                 breakpoints: {
                     600: {
@@ -158,14 +153,14 @@
                 },
             });
 
-            var swiper = new Swiper('.intro-slide', {
+            var introSwiper = new Swiper('.intro-slide', {
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.intro-pagination',
                     type: 'progressbar',
                 },
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.intro-next',
+                    prevEl: '.intro-prev',
                 },
             });
         </script>
