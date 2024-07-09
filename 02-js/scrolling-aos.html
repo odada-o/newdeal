@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>aos</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/aos@next/dist/aos.css"
+        />
+        <style>
+            .intro {
+                height: 100vh;
+                background: lightcyan;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                margin: 30px auto;
+                background-color: blue;
+            }
+            .fixed {
+                background: red;
+                position: fixed;
+                left: 0;
+                top: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="intro">intro</div>
+        <div
+            class="box box1"
+            data-aos="fade-in"
+        ></div>
+        <div
+            class="box box1"
+            data-aos="fade-up"
+        ></div>
+        <div
+            class="box box1"
+            data-aos="fade-down"
+        ></div>
+        <div
+            class="box box1"
+            id="trigger-left"
+            data-aos="fade-left"
+        ></div>
+        <div
+            class="box box1"
+            data-aos="fade-right"
+        ></div>
+        <div
+            class="box box1 fixed"
+            data-aos="fade-down-right"
+        ></div>
+        <div
+            class="box box1 fixed"
+            data-aos="fade-left"
+        ></div>
+        <div class="intro">intro</div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            // aos 초기화
+            AOS.init({
+                offset: 150,
+                delay: 50,
+                duration: 1000,
+                easing: 'ease-in-out',
+                mirror: true,
+                once: false,
+                anchorPlacement: 'top-center',
+            });
+        </script>
+    </body>
+</html>
