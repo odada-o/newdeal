@@ -7,18 +7,18 @@
             content="width=device-width, initial-scale=1.0"
         />
         <title>javascript 요약</title>
+        <script src="./main.js"></script>
     </head>
     <body>
-        <div id="demo">안녕!! 자바스크립트</div>
-        <button
-            onclick="document.getElementById('demo').innerHTML 
-        = '나와 함께 가자'"
+        <div
+            class="text"
+            style="color: red"
         >
-            버튼
-        </button>
+            안녕! 자바스크립트
+        </div>
+        <button onclick="document.getElementsByClassName('text').style.color = 'blue'">텍스트 변경</button>
 
         <hr />
-
         <!-- 버튼을 클릭했을 때 -->
         <!-- #myImage 의 src 값을 변경 -->
         <button onclick="document.getElementById('myImage').src='./images/pic_bulbon.gif'">전등 켜기</button>
@@ -28,5 +28,16 @@
             src="./images/pic_bulboff.gif"
             alt=""
         />
+
+        <hr />
+        <div id="demo">안녕!! 자바스크립트</div>
+        <button
+            onclick="document.getElementById('demo').innerHTML 
+        = '나와 함께 가자'"
+        >
+            버튼
+        </button>
+
+        <hr />
     </body>
 </html>
