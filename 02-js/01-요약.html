@@ -7,16 +7,20 @@
             content="width=device-width, initial-scale=1.0"
         />
         <title>javascript 요약</title>
-        <script src="./main.js"></script>
+        <script
+            defer
+            src="./main.js"
+        ></script>
     </head>
     <body>
         <div
-            class="text"
+            id="text"
             style="color: red"
         >
             안녕! 자바스크립트
         </div>
-        <button onclick="document.getElementsByClassName('text').style.color = 'blue'">텍스트 변경</button>
+        <button onclick="myF()">텍스트 변경</button>
+        <!-- <button onclick="">텍스트 변경</button> -->
 
         <hr />
         <!-- 버튼을 클릭했을 때 -->
