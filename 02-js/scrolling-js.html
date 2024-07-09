@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>scrolling js</title>
+        <style>
+            .container {
+                position: relative;
+                height: 200vh;
+            }
+            .item {
+                position: absolute;
+            }
+            .item1,
+            .item2 {
+                font-size: 100px;
+                font-weight: bold;
+            }
+            .item1 {
+                top: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item item1">마라탕</div>
+            <!-- <div class="item item2">탕후루</div>
+            <div class="item item3">item3</div> -->
+        </div>
+
+        <script>
+            // window.addEventListener(이벤트, 함수)
+            window.addEventListener('scroll', function () {
+                const container = document.querySelector('.container');
+                const item1 = document.querySelector('.item1');
+                const scrolled = window.scrollY; // 스크롤된 거리
+
+                console.log(scrolled);
+            });
+        </script>
+    </body>
+</html>

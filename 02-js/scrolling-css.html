@@ -8,9 +8,14 @@
         />
         <title>Document</title>
         <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
             .container {
                 height: 100vh;
                 overflow-x: hidden;
+                perspective: 1px;
             }
             .container div {
                 position: absolute;
@@ -19,6 +24,24 @@
                 right: 0;
                 font-size: 50px;
                 /* color: #fff; */
+            }
+            .container .item1 {
+                background: #333;
+                height: 150rem;
+            }
+            .container .item2 {
+                top: 0;
+                height: 500px;
+                background: aqua;
+                color: red;
+                transform: translateZ(-2px);
+            }
+            .container .item3 {
+                top: 900px;
+                height: 500px;
+                background-color: blueviolet;
+                opacity: 0.7;
+                transform: translateZ(-1px);
             }
         </style>
     </head>
