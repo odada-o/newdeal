@@ -21,7 +21,8 @@
                 font-weight: bold;
             }
             .item1 {
-                top: 0;
+                top: 300px;
+                transform-origin: 0 0;
             }
         </style>
     </head>
@@ -42,6 +43,7 @@
                 console.log(scrolled);
 
                 item1.style.color = 'red';
+                item1.style.transform = `translate(${scrolled * 0.5}px, ${scrolled}px) scale(${scrolled * 0.01})`;
             });
         </script>
     </body>
