@@ -154,7 +154,14 @@ function myFunc1() {
 }
 
 // 익명 함수 (함수 표현식)
-myFunc2();
 const myFunc2 = function () {
     console.log('익명 함수 호출');
 };
+
+myFunc2();
+
+// 화살표 함수(es6)
+const myFunc3 = () => {
+    console.log('화살표 함수 호출');
+};
+myFunc3();
