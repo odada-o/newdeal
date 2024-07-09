@@ -21,7 +21,7 @@
                 font-weight: bold;
             }
             .item1 {
-                top: 300px;
+                top: 0;
             }
         </style>
     </head>
@@ -37,9 +37,11 @@
             window.addEventListener('scroll', function () {
                 const container = document.querySelector('.container');
                 const item1 = document.querySelector('.item1');
-                const scrolled = window.scrollY; // 스크롤된 거리
 
+                const scrolled = window.scrollY; // 스크롤된 거리
                 console.log(scrolled);
+
+                item1.style.color = 'red';
             });
         </script>
     </body>
