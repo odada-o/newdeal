@@ -64,3 +64,10 @@ console.log(h ?? 5); // 0
 // 삼항 연산자
 // 조건 ? 참 : 거짓
 console.log(true ? '김겨울님 안녕하세요.' : '로그인이 필요합니다.');
+
+function isCat(text) {
+    return text === '고양이' ? '고양이 맞아!' : '고양이 아냐!';
+}
+
+console.log(isCat('고양이')); // 고양이 맞아!
+console.log(isCat('강아지')); // 고양이 아냐!
