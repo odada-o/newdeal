@@ -78,20 +78,40 @@
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script>
-            const tl = gsap.timeline();
+            gsap.registerPlugin(ScrollTrigger);
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.pin01', // 기준이 되는 요소
+                    scrub: 1, // 스크롤 속도에 따라 애니메이션 속도 조절
+                    pin: '.pin01', // 스크롤이 특정 위치에 도달하면 고정
+                    start: 'top top', // 애니메이션이 시작되는 위치
+                    end: '+=100%', // 애니메이션이 끝나는 위치
+                    markers: true, // 디버깅을 위한 마커 표시
+                },
+            });
 
             // gsap.to('타겟', {옵션})
             tl.to('.typo01', {
                 y: 0,
                 duration: 1,
             })
-                .to('.typo02', {
-                    y: 0,
-                    duration: 1,
-                })
+                .to(
+                    '.typo02',
+                    {
+                        y: 0,
+                        duration: 1,
+                    },
+                    '-=1',
+                )
                 .to('.typo span', {
                     opacity: 0,
+                    duration: 1,
+                })
+                .to('.typo', {
+                    gap: 0,
                     duration: 1,
                 });
         </script>
