@@ -23,8 +23,28 @@
                 font-family: 'GmarketSansMedium';
                 line-height: 1.5;
             }
+            .container {
+                position: relative;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+            .typo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
             .typo .item {
                 font-size: 70px;
+            }
+            .typo .item1 {
+                transform: translateY(-200px);
+            }
+            .typo .item2 {
+                transform: translateY(200px);
             }
         </style>
     </head>
