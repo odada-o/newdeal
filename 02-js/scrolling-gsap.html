@@ -86,6 +86,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script>
@@ -129,27 +130,31 @@
             const headerEl = document.querySelector('#header');
 
             // 윈도우 스크롤 이벤트가 발생하면
-            window.addEventListener('scroll', function () {
-                const scrollY = window.scrollY;
-                console.log(scrollY);
+            // https://lodash.com/docs/4.17.15#throttle
+            window.addEventListener(
+                'scroll',
+                _.throttle(function () {
+                    const scrollY = window.scrollY;
+                    console.log(scrollY);
 
-                // 만약 스크롤 위치가 100px 이상일 경우
-                if (scrollY > 100) {
-                    // header를 보이지 않게 만든다.
-                    // headerEl.style.display = 'none';
-                    gsap.to(headerEl, {
-                        y: -100,
-                        duration: 0.3,
-                    });
-                } else {
-                    // 그렇지 않으면 보이게 한다.
-                    // headerEl.style.display = 'block';
-                    gsap.to(headerEl, {
-                        y: 0,
-                        duration: 0.3,
-                    });
-                }
-            });
+                    // 만약 스크롤 위치가 100px 이상일 경우
+                    if (scrollY > 100) {
+                        // header를 보이지 않게 만든다.
+                        // headerEl.style.display = 'none';
+                        gsap.to(headerEl, {
+                            y: -100,
+                            duration: 0.3,
+                        });
+                    } else {
+                        // 그렇지 않으면 보이게 한다.
+                        // headerEl.style.display = 'block';
+                        gsap.to(headerEl, {
+                            y: 0,
+                            duration: 0.3,
+                        });
+                    }
+                }, 300),
+            );
         </script>
     </body>
 </html>
