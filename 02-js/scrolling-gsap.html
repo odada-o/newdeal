@@ -79,15 +79,21 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
         <script>
+            const tl = gsap.timeline();
+
             // gsap.to('타겟', {옵션})
-            gsap.to('.typo01', {
+            tl.to('.typo01', {
                 y: 0,
                 duration: 1,
-            });
-            gsap.to('.typo02', {
-                y: 0,
-                duration: 1,
-            });
+            })
+                .to('.typo02', {
+                    y: 0,
+                    duration: 1,
+                })
+                .to('.typo span', {
+                    opacity: 0,
+                    duration: 1,
+                });
         </script>
     </body>
 </html>
