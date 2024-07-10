@@ -27,7 +27,15 @@
             html {
                 height: 100%;
             }
-
+            #header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100px;
+                background: lightgreen;
+                text-align: center;
+            }
             .container {
                 height: 200vh; /* 전체 문서 높이를 늘림 */
             }
@@ -64,12 +72,10 @@
             .intro .typo .typo02 {
                 transform: translateY(200px);
             }
-            .pin01 {
-                background: lightcyan;
-            }
         </style>
     </head>
     <body>
+        <header id="header">header</header>
         <div class="container">
             <div class="intro pin01">
                 <div class="inner">
@@ -118,6 +124,22 @@
                     gap: 0,
                     duration: 1,
                 });
+
+            // header
+            const headerEl = document.querySelector('#header');
+
+            // 윈도우 스크롤 이벤트가 발생하면
+            window.addEventListener('scroll', function () {
+                const scrollY = window.scrollY;
+                console.log(scrollY);
+
+                // 만약 스크롤 위치가 100px 이상일 경우
+                if (scrollY > 100) {
+                    // header를 보이지 않게 만든다.
+                } else {
+                    // 그렇지 않으면 보이게 한다.
+                }
+            });
         </script>
     </body>
 </html>
