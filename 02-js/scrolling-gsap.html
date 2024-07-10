@@ -136,10 +136,18 @@
                 // 만약 스크롤 위치가 100px 이상일 경우
                 if (scrollY > 100) {
                     // header를 보이지 않게 만든다.
-                    headerEl.style.display = 'none';
+                    // headerEl.style.display = 'none';
+                    gsap.to(headerEl, {
+                        y: -100,
+                        duration: 0.3,
+                    });
                 } else {
                     // 그렇지 않으면 보이게 한다.
-                    headerEl.style.display = 'block';
+                    // headerEl.style.display = 'block';
+                    gsap.to(headerEl, {
+                        y: 0,
+                        duration: 0.3,
+                    });
                 }
             });
         </script>
