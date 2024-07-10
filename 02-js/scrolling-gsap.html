@@ -6,8 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
-        <title>GSAP</title>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <title>Document</title>
         <style>
             @font-face {
                 font-family: 'GmarketSansMedium';
@@ -16,6 +15,7 @@
                 font-weight: normal;
                 font-style: normal;
             }
+
             * {
                 margin: 0;
                 padding: 0;
@@ -23,42 +23,60 @@
                 font-family: 'GmarketSansMedium';
                 line-height: 1.5;
             }
-            html,
-            body {
-                min-height: 100%;
+            body,
+            html {
+                height: 100%;
             }
+
             .container {
+                height: 200vh; /* 전체 문서 높이를 늘림 */
+            }
+            .inner {
                 position: relative;
                 max-width: 1280px;
-                height: 200vh;
                 margin: 0 auto;
+                height: 100vh; /* 높이를 100vh로 설정 */
             }
-            .typo {
+            .intro .typo {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 display: flex;
-                justify-content: space-between;
-                width: 100%;
-            }
-            .typo .item {
+                justify-content: center;
+                align-items: center;
+                gap: 400px;
                 font-size: 70px;
+                text-align: center;
             }
-            .typo .item1 {
+            .intro .typo01,
+            .intro .typo02 {
+                white-space: nowrap;
+            }
+            .intro .typo span {
+                display: block;
+                font-size: 40px;
+                font-weight: 400;
+            }
+            .intro .typo .typo01 {
                 transform: translateY(-200px);
             }
-            .typo .item2 {
+            .intro .typo .typo02 {
                 transform: translateY(200px);
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="typo">
-                <div class="item item1">마라탕</div>
-                <div class="item item2">탕후루</div>
+            <div class="intro pin01">
+                <div class="inner">
+                    <div class="typo">
+                        <div class="typo01">마라탕<span>Malatang</span></div>
+                        <div class="typo02">탕후루<span>Tanghulu</span></div>
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     </body>
 </html>
