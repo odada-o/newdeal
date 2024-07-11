@@ -53,7 +53,7 @@ if (f || g) {
 }
 
 // 연산자를 기준으로 가장 먼저 만나는 true 값을 반환
-console.log(true || false || ''); // true
+console.log(undefined || true); // true
 console.log(1 || 0 || 2); // 1
 console.log(false || 0 || ''); // ''
 
@@ -71,3 +71,19 @@ function isCat(text) {
 
 console.log(isCat('고양이')); // 고양이 맞아!
 console.log(isCat('강아지')); // 고양이 아냐!
+
+// 전개 연산자
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+console.log(arr3); // [1, 2, 3, 4, 5, 6]
+
+const obj1 = {
+    a: 1,
+    b: 2,
+};
+const obj2 = {
+    ...obj1,
+    c: 3,
+};
+console.log(obj2); // { a: 1, b: 2, c: 3 }
