@@ -98,3 +98,35 @@ function getSound(animal) {
 
 console.log(getSound('개')); // 멍멍
 console.log(getSound('물고기')); // ...
+
+// if문
+function getSound2(animal) {
+    if (animal === '개') return '멍멍';
+    if (animal === '고양이') return '야옹';
+    return '...';
+}
+console.log(getSound2('개')); // 멍멍
+console.log(getSound2('물고기')); // ...
+
+// 반복문
+// for문
+// for(초기값; 조건; 증감) {
+//     // 실행할 코드
+// }
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// for of문
+const animals = ['개', '고양이', '물고기'];
+
+// for (let i = 0; i < 3; i++) {
+//     console.log(animals[i]);
+// }
+
+// for (변수 of 배열) {
+//     // 실행할 코드
+// }
+for (let animal of animals) {
+    console.log(animal);
+}
