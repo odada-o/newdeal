@@ -1,23 +1,5 @@
-import Swiper from 'swiper';
+import button, { buttonBlue as btnB, buttonRed } from './module';
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
+button(); // 버튼을 사용하겠음
+buttonRed();
+btnB();
