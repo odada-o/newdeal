@@ -63,6 +63,25 @@ class OrderCoffee2 {
     printOrder() {
         return `${this.name}는 ${this.price}원 입니다.`;
     }
+
+    making() {
+        return `${this.name}를 만들고 있습니다.`;
+    }
+
+    made() {
+        return `${this.name}가 완성되었습니다.`;
+    }
+}
+
+class CharacterCoffee extends OrderCoffee2 {
+    constructor(name, price, character) {
+        super(name, price);
+        this.character = character;
+    }
+
+    printOrder() {
+        return `${this.character} ${this.name}는 ${this.price}원입니다.`;
+    }
 }
 
 // 객체 생성을 위한 클래스
@@ -70,3 +89,13 @@ const americano3 = new OrderCoffee2('아메리카노', 4000);
 const latte3 = new OrderCoffee2('라떼', 4500);
 
 console.log(americano3.printOrder()); // 아메리카노는 4000원 입니다.
+console.log(latte3.printOrder()); // 라떼는 4500원 입니다.
+
+console.log(americano3.making()); // 아메리카노를 만들고 있습니다.
+console.log(latte3.making()); // 라떼를 만들고 있습니다.
+
+console.log(americano3.made()); // 아메리카노가 완성되었습니다.
+console.log(latte3.made()); // 라떼가 완성되었습니다.
+
+const charLatte = new CharacterCoffee('라떼', 6500, '미니언즈');
+console.log(charLatte.printOrder()); // 미니언즈 라떼는 6500원입니다.
