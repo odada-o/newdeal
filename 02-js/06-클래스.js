@@ -32,10 +32,41 @@ const americano = {
 const latte = {
     name: '라떼',
     price: 4500,
-    orderCoffee() {
-        return `${this.name}는 ${this.price}원 입니다.`;
-    },
 };
 
 console.log(americano.orderCoffee()); // 아메리카노는 4000원 입니다.
-console.log(latte.orderCoffee()); // 라떼는 4500원 입니다.
+console.log(americano.orderCoffee.call(latte)); // 라떼는 4500원 입니다.
+
+// prototype을 이용한 메서드 재활용
+const americano2 = new OrderCoffee('아메리카노', 4000);
+const latte2 = new OrderCoffee('라떼', 4500);
+
+function OrderCoffee(name, price) {
+    this.name = name;
+    this.price = price;
+}
+
+OrderCoffee.prototype.printOrder = function () {
+    return `${this.name}는 ${this.price}원 입니다.`;
+};
+
+console.log(americano2.printOrder()); // 아메리카노는 4000원 입니다.
+console.log(latte2.printOrder()); // 라떼는 4500원 입니다.
+
+// es6 class 문법을 이용한 생성자 함수
+class OrderCoffee2 {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    printOrder() {
+        return `${this.name}는 ${this.price}원 입니다.`;
+    }
+}
+
+// 객체 생성을 위한 클래스
+const americano3 = new OrderCoffee2('아메리카노', 4000);
+const latte3 = new OrderCoffee2('라떼', 4500);
+
+console.log(americano3.printOrder()); // 아메리카노는 4000원 입니다.
