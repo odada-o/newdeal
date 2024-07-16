@@ -9,10 +9,71 @@
         <title>javascript 요약</title>
         <script
             defer
-            src="./07-숫자.js"
+            src="./07-배열.js"
         ></script>
     </head>
     <body>
+        <ul class="list-news">
+            <!-- <li>
+                <img
+                    src="https://img.hankyung.com/photo/202407/ZA.37357664.1.jpg"
+                    alt=""
+                />
+                <h2>코스피, '트럼프 재집권 가능성'에 혼조…밸류업은 강세</h2>
+                <p>
+                    코스피가 16일 장 초반 보합권에서 등락을 거듭하고 있다. 지난 주말 피격으로 도널드 트럼프 전 미국
+                    대통령의 재집권 가능성이 높아진 여파다. 다만 밸류업 관련 종목들은 상대적으로 강한 모습이다.
+                </p>
+            </li> -->
+        </ul>
+        <script>
+            const news = [
+                {
+                    userId: 1,
+                    id: 1,
+                    title: '"그리기 귀찮다, 금연해라" 초등생 금연 포스터 화제',
+                    body: '벽에 전시돼 있는 듯한 포스터에는 "포스터 그리기도 귀찮다, 이젠 좀 금연해라"라는 문구가 적혀 있습니다.',
+                    img: 'https://image.newsis.com/2024/07/12/NISI20240712_0001600094_web.jpg?rnd=20240712091623',
+                },
+                {
+                    userId: 1,
+                    id: 2,
+                    title: '4억 올릴테니 살테면 사라던 배짱 결국…개포아파트 다 팔렸다',
+                    body: '서울 아파트값 회복세와 맞물려 가격이 25억5000만원까지 올랐던 ‘디에이치퍼스티어아이파크’ 전용면적 59㎡ 보류지가 매각된 것으로 나타났다. 실거래가보다 높은 가격에 나왔던 보류지 매물이 주인을 찾으며 신고가를 기록하게 됐다. 이렇듯 주거선호도가 높은 강남 일대에선 보류지 신고가 소식이 전해지는 등 아파트값 상승세가 지속되는 양상이다.',
+                    img: 'https://res.heraldm.com/content/image/2024/07/15/20240715050653_0.jpg',
+                },
+                {
+                    userId: 1,
+                    id: 3,
+                    title: 'god 박준형 “친환경? X소리” 전기차 저격…‘당선 확률 70%’ 트럼프에 찢어지는 주주 가슴?',
+                    body: '15일 국내 2차전지주(株)가 일제히 약세를 보였다. 피격 이후 11월 대선 승리 가능성이 높아진 것으로 평가되는 도널드 트럼프 전 미국 대통령의 반(反) 친환경 정책에 따른 전기차 산업 모멘텀 후퇴에 대한 우려가 커진 탓으로 읽힌다.',
+                    img: 'https://cdn.namdonews.com/news/photo/202407/779824_449560_454.jpg',
+                },
+                {
+                    userId: 1,
+                    id: 4,
+                    title: '“제2의 ‘불닭’ 찾아라”…K-푸드 앞세워 해외 노리는 식품사들',
+                    body: '삼양식품의 ‘불닭볶음면’이 전 세계 100여개국에 수출되며 K-라면 대표주자로 자리매김하는 등 폭풍 성장을 이어가고 있다. ‘불닭 파워’를 등에 업은 삼양식품의 해외 실적은 매해 고성장 중이다. 1분기 해외 매출은 83% 상승한 2889억원이다. 삼양식품 전체 매출에서 해외 매출 비중은 75%에 이른다. ',
+                    img: 'https://economist.co.kr/data/ecn/image/2024/07/04/ecn20240704000022.477x.0.jpg',
+                },
+            ];
+
+            const listNews = document.querySelector('.list-news');
+            // 뉴스 데이터 배열이 들어오는데
+            // 4개의 뉴스가 객체로 들어온다.
+            news.map(newsItem => {
+                // li 태그 생성
+                const li = document.createElement('li');
+                const img = document.createElement('img');
+                const h2 = document.createElement('h2');
+                const p = document.createElement('p');
+
+                li.appendChild(img);
+
+                listNews.appendChild(li);
+            });
+        </script>
+        <hr />
         <button id="btn">타이머 정지</button>
 
         <div id="wrap">
