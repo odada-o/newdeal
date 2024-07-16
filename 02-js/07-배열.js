@@ -77,3 +77,48 @@ const newUsers = userss.map(user => ({
     email: `${user.name}@gmail.com`,
 }));
 console.log(newUsers);
+
+// push()
+const f = arr.push(6);
+console.log(f); // 6
+console.log(arr); // [1, 2, 3, 4, 5, 6]
+
+// reduce()
+const g = arr.reduce((acc, curr) => {
+    return acc + curr;
+}, 0);
+
+// 평균나이 구하기
+const usersss = [
+    { name: '홍길동', age: 36 },
+    { name: '고길동', age: 12 },
+    { name: '둘리', age: 6 },
+];
+
+const totalAge = usersss.reduce((acc, curr) => {
+    console.log(curr); // { name: '홍길동', age: 36 } ...
+    console.log(curr.age); // 36 ...
+    return acc + curr.age;
+}, 0);
+console.log(totalAge); // 54
+
+const aveAge = totalAge / usersss.length;
+console.log(aveAge); // 18
+
+// 이름 출력하기
+const userssss = [
+    { name: '홍길동', age: 36 },
+    { name: '고길동', age: 12 },
+    { name: '둘리', age: 6 },
+];
+// [홍길동, 고길동, 둘리]
+const nameList = userssss
+    .reduce((acc, cur) => {
+        acc.push(cur.name);
+        return acc;
+        // acc = [], cur.name = 홍길동
+        // acc = [홍길동], cur.name = 고길동
+        // acc = [홍길동, 고길동], cur.name = 둘리
+        // acc = [홍길동, 고길동, 둘리]
+    }, [])
+    .join(', ');

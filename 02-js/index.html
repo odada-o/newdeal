@@ -13,19 +13,40 @@
         ></script>
     </head>
     <body>
-        <ul class="list-news">
-            <!-- <li>
-                <img
-                    src="https://img.hankyung.com/photo/202407/ZA.37357664.1.jpg"
-                    alt=""
-                />
-                <h2>코스피, '트럼프 재집권 가능성'에 혼조…밸류업은 강세</h2>
-                <p>
-                    코스피가 16일 장 초반 보합권에서 등락을 거듭하고 있다. 지난 주말 피격으로 도널드 트럼프 전 미국
-                    대통령의 재집권 가능성이 높아진 여파다. 다만 밸류업 관련 종목들은 상대적으로 강한 모습이다.
-                </p>
-            </li> -->
-        </ul>
+        <ul class="list-news"></ul>
+        <style>
+            .list-news {
+                display: flex;
+                gap: 24px;
+                max-width: 1280px;
+                margin: 0 auto;
+                list-style: none;
+            }
+            .list-news li {
+                flex: 1;
+            }
+            .list-news h2 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .list-news p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+            .list-news img {
+                display: block;
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                object-position: 50% 20%;
+            }
+        </style>
         <script>
             const news = [
                 {
