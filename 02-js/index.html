@@ -69,8 +69,14 @@
                 const p = document.createElement('p');
 
                 li.appendChild(img);
+                li.appendChild(h2);
+                li.appendChild(p);
 
                 listNews.appendChild(li);
+
+                img.src = newsItem.img;
+                h2.textContent = newsItem.title;
+                p.textContent = newsItem.body;
             });
         </script>
         <hr />
