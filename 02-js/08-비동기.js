@@ -76,8 +76,14 @@ const getUser = userId => {
     return new Promise((resolve, reject) => {
         // api 호출
         fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-            .then(res => res.json())
-            .then(data => resolve(data));
+            .then(res => {
+                if (!res.ok) {
+                    return reject('사용자 정보를 가져오지 못했습니다.');
+                }
+                return res.json();
+            })
+            .then(data => resolve(data))
+            .catch(err => reject(err));
     });
 };
 
@@ -92,18 +98,32 @@ getUser(1)
     })
     .then(data => {
         console.log(data.name);
+    })
+    .catch(err => {
+        console.error(err);
+    })
+    .finally(() => {
+        console.log('끝');
     });
 
 // async await
 const main = async () => {
-    const data1 = await getUser(1);
-    console.log(`async await : ${data1.name}`);
+    try {
+        const data1 = await getUser(1);
+        console.log(`async await : ${data1.name}`);
 
-    const data2 = await getUser(2);
-    console.log(`async await : ${data2.name}`);
+        const data2 = await getUser(2);
+        console.log(`async await : ${data2.name}`);
 
-    const data3 = await getUser(3);
-    console.log(`async await : ${data3.name}`);
+        const data3 = await getUser(3);
+        console.log(`async await : ${data3.name}`);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        console.log('async await 끝');
+    }
 };
 
 main();
+
+console.log('aa' + fetch('https://jsonplaceholder.typicode.com/users').then(res => console.log(res.json())));
