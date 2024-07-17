@@ -108,3 +108,14 @@ Object.assign(list.style, {
 listEls.forEach(listEl => {
     listEl.style.cssText = 'color: red; font-size: 20px;';
 });
+
+const style = window.getComputedStyle(list);
+console.log(style.width); // 200px
+console.log(style.backgroundColor); // rgb(135, 206, 235)
+
+// 속성
+list.setAttribute('title', 'list');
+console.log(list.hasAttribute('title')); // true
+
+list.removeAttribute('title');
+console.log(list.hasAttribute('title')); // false
