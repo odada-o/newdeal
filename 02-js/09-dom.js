@@ -66,3 +66,45 @@ console.log(container.contains(document.body)); // false
 console.log(item.textContent);
 item.textContent = 'new text';
 console.log(item.textContent);
+
+// innerHTML
+console.log(container.innerHTML);
+container.innerHTML = '<h2>new html</h2>';
+container.innerHTML += '<p class="txt" style="color: red">new p</p>';
+
+// tagName
+console.log(item.tagName);
+console.log(item.id); // item
+console.log(item.className); // item
+
+item.className += ' active';
+console.log(item.className); // item active
+
+// classList()
+const listEls = document.querySelectorAll('.list li');
+
+listEls.forEach(listEl => {
+    listEl.classList.add('active');
+    listEl.classList.remove('active');
+    listEl.addEventListener('click', () => {
+        listEl.classList.toggle('active');
+    });
+});
+
+const list = document.querySelector('.list');
+
+// 개별지정
+list.style.width = '200px';
+list.style.backgroundColor = 'skyblue';
+list.style.padding = '10px';
+
+// 한번에 지정
+Object.assign(list.style, {
+    height: '200px',
+    margin: '0 auto',
+});
+
+// cssText
+listEls.forEach(listEl => {
+    listEl.style.cssText = 'color: red; font-size: 20px;';
+});
