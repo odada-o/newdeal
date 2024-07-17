@@ -56,3 +56,13 @@ item.remove();
 // 대상요소.insertAdjacentElement('위치', 추가할요소)
 
 container.insertAdjacentElement('beforebegin', newItem);
+// container.insertAdjacentElement('afterbegin', 'dddd');
+
+// contains()
+console.log(document.body.contains(container)); // true
+console.log(container.contains(document.body)); // false
+
+// textContent
+console.log(item.textContent);
+item.textContent = 'new text';
+console.log(item.textContent);
