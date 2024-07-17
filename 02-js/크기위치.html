@@ -14,6 +14,10 @@
             <div class="item">2</div>
         </div>
         <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
             body {
                 height: 1000px;
                 padding: 500px 0;
@@ -31,5 +35,34 @@
                 background: red;
             }
         </style>
+
+        <button>click</button>
+        <script>
+            console.log(window.innerWidth);
+            console.log(window.innerHeight);
+            console.log(window.scrollY);
+            // 최상단을 기준으로
+            // window.scrollTo({
+            //     top: 100,
+            //     behavior: 'smooth',
+            // });
+            // 현재 위치를 기준으로
+            // window.scrollBy({
+            //     top: 100,
+            //     behavior: 'smooth',
+            // });
+
+            const container = document.querySelector('.container');
+            const item = document.querySelector('.item');
+
+            console.log(container.clientWidth);
+            console.log(container.offsetWidth);
+            console.log(container.scrollWidth, container.scrollHeight);
+            console.log(container.offsetTop, item.offsetTop);
+
+            document.querySelector('button').addEventListener('click', event => {
+                console.log(event);
+            });
+        </script>
     </body>
 </html>
